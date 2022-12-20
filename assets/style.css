@@ -4,9 +4,6 @@
 	margin: 0;
 }
 
-
-
-
 body {
 	background: #1D1E22;
 	color: white;
@@ -362,4 +359,4 @@ h4{
 	background-image: url('Images/giga.png');
 	transition: margin-left 0.6s, filter 0.3s, box-shadow 0.3s;
 }
->>>>>>> 6c76d51382a95603a8f8969de9b09b857508841b
+
