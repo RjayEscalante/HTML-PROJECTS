@@ -6,7 +6,7 @@
 	margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 @keyframes rainbow {0%{background-position:left} 50%{background-position:right} 100%{background-position:left}}
 
 body {
@@ -16,6 +16,10 @@ body {
 	align-items: center;
 	flex-direction: column;
   }
+
+html{
+	scroll-behavior: smooth;
+}
 
   
 /*FOUR DIVS MAIN SECTION (FIRST PAGE, SECOND PAGE, TEAM, LAST PAGE)*/
@@ -30,7 +34,7 @@ body {
 }
 
 .rni:nth-child(2){
-	background-image: url(Images/few.png);
+	background-image: url(Images/many.png);
 	background-size: cover;
 	background-attachment: fixed;
 	filter: drop-shadow(-0px 0px 8px #000000);
@@ -40,9 +44,9 @@ body {
 
 .rni:nth-child(3){
 	height: 1000px;
-	background: rgb(153, 55, 55);
+	background: rgb(0, 0, 0);
+	height: 890px;
 	background-attachment: fixed;
-	background-size: cover;
 }
 
 .rni:nth-child(4){
@@ -55,7 +59,7 @@ body {
 	background-image: url(Images/last_wave.webp);
 	filter: blur(3px);
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: 100%;
 }
 
 
@@ -70,20 +74,77 @@ body {
 	opacity: 0;
 }
 
-
-.cicada{
-	position: relative;
-	font-family: arial;
-	font-size: 120px;
-	top: -400px;
-	text-align: center;
+.about_us{
+	position: absolute;
+	font-family: 'Roboto', monospace;
+	font-weight: 100;
+	letter-spacing: 9px;
+	text-align: left;
 	color: rgb(255, 255, 255);
-    text-shadow:
-    -2px -2px 0 #000000,
-    2px -2px 0 rgb(17, 17, 17),
-    -2px 2px 0 rgb(17, 17, 17),
-    2px 2px 0 rgb(17, 17, 17);  	
+	font-size: 70px;
+	left: 39%;
+	top: 117%;
+
 }
+
+.about_us2{
+	position: absolute;
+	font-family: 'Roboto Mono', monospace;
+	color: rgb(255, 255, 255);
+	padding-right: 6%;
+	font-size: 24px;
+	font-weight: 100;
+	top: 147%;
+	left: 39%;
+}
+
+.walter{
+	position: relative;
+	width: 700px;
+	height: 700px;
+	top: -10%;
+	left: -40%;
+}
+
+.horizontal3{
+	right: 0px;
+	bottom: -14%;
+	margin-top: 10px;
+	position: absolute;
+  	border-bottom: 2.2px dotted rgb(255, 255, 255);
+  	width: 70%;
+} 
+
+.horizontal4{
+	position: absolute;
+	left: 0px;
+	border-bottom: 2.2px dotted rgb(255, 255, 255);
+	top: 204%;
+	width: 100%;
+} 
+
+.vertical{
+	position: relative;
+	left: -45%;
+	border-right: 2.2px dotted rgb(255, 255, 255);
+	top: 0%;
+	height: 100%;
+	width: 180px;
+
+} 
+.invert_circle{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: difference;
+	background-color: #ffffff;
+	top: 130%;
+	right: 40%;
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	z-index: 1;
+}
+
 
 h1{
 	position: relative;
@@ -95,6 +156,7 @@ h1{
 	color: #fff;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 2px;
+	overflow-x:hidden;
 }
 h2{
 	position: relative;
@@ -105,6 +167,7 @@ h2{
 	margin-bottom: 0px;
 	color: white;
 	transition: left 0.7s;
+	overflow-x:hidden;
 }
 h3{
 	position: relative;
@@ -112,19 +175,22 @@ h3{
 	font-size: 90px;
 	right: -22%;
 	margin-bottom: 0px;
+	font-weight: 600;
 	color: white;
-
+	overflow-x:hidden;
 }
 
 h4{
 	position: relative;
 	font-family: arial;
+	border-left: 800px;
 	font-size: 90px;
 	right: -10%;
 	margin-bottom: 0px;
 	color: #fff;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 2px;
+	overflow:hidden;
 }
 
 .off_team{
@@ -175,6 +241,7 @@ h4{
 .gradient-text{
 	position: relative;
 	font-family:arial;
+	letter-spacing: 4px;
 	background: linear-gradient(to right, rgb(220, 20, 20),rgb(255, 147, 97),rgb(255, 123, 0));
 	background-size: 200% 200%;
 	animation: rainbow 2s ease-in-out infinite;
@@ -185,6 +252,7 @@ h4{
 	display:block;
 	transition: color .2s ease-in-out, .7s;
 	text-transform:uppercase;
+	overflow:hidden;
 
   }
 .gradient-text:hover{
@@ -194,25 +262,16 @@ h4{
   }
 
 
-.myself{
-	position: relative;
-	font-family: arial;
-	top: 270px;
-	left: -70px;
-	color: white;
-	font-size: 60px;
-	z-index: 10;
-	opacity: 0	;
-}
-
-
-.horizontal_dotted_line{
+  
+  
+  .horizontal_dotted_line{
 	right: 0px;
 	top: -150px;
 	margin-top: -0px;
 	position: absolute;
-  	border-bottom: 3.9px dotted rgb(255, 255, 255);
+  	border-bottom: 2.2px dotted rgb(255, 255, 255);
   	width: 100%;
+	
 } 
 
 .horizontal_2{
@@ -220,7 +279,7 @@ h4{
 	bottom: 5%;
 	margin-top: 10px;
 	position: absolute;
-  	border-bottom: 3.9px dotted rgb(255, 255, 255);
+  	border-bottom: 2.2px dotted rgb(255, 255, 255);
   	width: 70%;
 } 
 
@@ -261,10 +320,10 @@ h4{
 	width: 320px;
 	height: 440px;
 	border: 3px white;
-	background: radial-gradient(circle at 1.7% 37.8%, rgb(22, 22, 22) 0%, rgb(5, 5, 5) 90%);
+	background: radial-gradient(circle at 1.7% 37.8%, rgb(26, 26, 26) 0%, rgb(5, 5, 5) 90%);
 	display: flex;
 	transition: 0.2s ease-in-out;
-	margin-left: 20px;
+	margin-left: 2vmin;
 	margin-bottom: 30%;
 }
 
@@ -278,18 +337,38 @@ h4{
 .card:hover{
 	transform: translateY(-20px);
 	color: rgba(255, 255, 255, 1);
-	box-shadow: 0 5px 45px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 45px rgba(255, 22, 22, 0.4);
 }
 
 .card:hover .img-1{filter: blur(4px);}
 .card:hover .img-2{filter: blur(4px);}
 .card:hover .img-3{filter: blur(4px);}
 
+.myself{
+	position: relative;
+	font-family: arial;
+	top: 270px;
+	left: -70px;
+	font-size: 60px;
+	z-index: 10;
+	opacity: 0	;
+	letter-spacing: 4px;
+	background: linear-gradient(to right, rgb(220, 20, 20),rgb(255, 147, 97),rgb(255, 123, 0));
+	background-size: 200% 200%;
+	animation: rainbow 2s ease-in-out infinite;
+	background-clip: text;
+	-webkit-background-clip:text;
+	color:rgb(255, 255, 255);
+	display:block;
+	transition: color .2s ease-in-out, .7s;
+	text-transform:uppercase;
+}
 
 
 .card:hover .myself{
 	opacity: 1;
 	transform: translateY(30px);
+	color:rgba(0,0,0,0);
 	transition: 0.25s;
 }
 
@@ -301,7 +380,7 @@ h4{
 	white-space: nowrap;
 	position: relative;
 	font-family: 'Roboto Mono', monospace;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 20px;
 	font-stretch: expanded;
 	color: #ffffff;
